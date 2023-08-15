@@ -1,0 +1,157 @@
+.page-start {
+    max-width: 375px;
+    height: 100vh;
+    background-color: getColor("accentLight");
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    &__right {
+        display: none;
+
+    }
+
+    &__left {
+        max-width: 375px;
+        padding: 0 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: $fontSizeTitleSmaller;
+        margin-top: 40px;
+    }
+
+    &__text {
+        margin: 24px 0;
+    }
+
+    &__item {
+        line-height: 1.5;
+        background-image: url("../../images/icon-list.svg");
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        padding-left: 37px;
+        height: 21px;
+
+        &:not(:last-child) {
+            margin-bottom: 37px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        position: relative;
+        margin-top: 40px;
+    }
+
+    &__validation {
+        position: absolute;
+        right: 0;
+        font-size: $fontSizeSmall;
+
+    }
+
+    &__validation-valid {
+        color: transparent;
+    }
+
+    &__validation-invalid {
+        color: getColor('forth');
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        font-size: $fontSizeSmall;
+    }
+
+    &__input {
+        height: 56px;
+        padding-left: 24px;
+        font-size: $fontSizeBig;
+        outline: none;
+        border-radius: 8px;
+        border: 1px solid getColor('third');
+        margin-top: 8px;
+        margin-bottom: 24px;
+
+        &::placeholder {
+            color: getColor('secondary');
+            font-size: $fontSizeSmall;
+        }
+    }
+
+    &__input-valid {
+        border: 1px solid getColor('third');
+
+        &:hover,
+        &:focus {
+            border: 1px solid getColor('secondary');
+        }
+    }
+
+    &__input-invalid {
+        border: 1px solid getColor('forth');
+        background-color: getColor('fifth');
+    }
+
+    &__button {
+        border: none;
+        border-radius: 8px;
+        height: 56px;
+        color: getColor("accentLight");
+        background-color: getColor('secondary');
+
+
+        &:hover,
+        &:focus {
+            background-image: $gradient-hover;
+            box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.50);
+            cursor: pointer;
+        }
+    }
+}
+
+@media #{$desktop} {
+    .page-start {
+        max-width: 928px;
+        min-width: 928px;
+        height: 641px;
+        flex-direction: row;
+        border-radius: 36px;
+        padding: 24px;
+        padding-left: 0;
+
+        &__mobil-top {
+            display: none;
+        }
+
+        &__right {
+            display: block;
+            border-radius: 16px;
+            margin-left: auto;
+        }
+
+        &__left {
+            max-width: 504px;
+            min-width: 504px;
+            padding: 0 64px;
+        }
+
+        &__title {
+            font-size: $fontSizeTitle;
+            margin-top: 73px;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 13px;
+            }
+        }
+    }
+}

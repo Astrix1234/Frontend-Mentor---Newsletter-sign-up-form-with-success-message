@@ -1,0 +1,62 @@
+.modal {
+    margin: auto;
+    background-color: getColor("accentLight");
+    max-width: 375px;
+    height: 100vh;
+    padding: 0 24px;
+    padding-bottom: 40px;
+    padding-top: 149px;
+    display: flex;
+    flex-direction: column;
+
+
+    &__success {
+        width: 64px;
+        height: 64px;
+    }
+
+    &__title {
+        font-size: $fontSizeTitleSmaller;
+        margin-top: 40px;
+        margin-bottom: 24px;
+    }
+
+    &__info {
+        line-height: 1.5;
+    }
+
+    &__button {
+        @extend .page-start__button;
+        margin-top: auto;
+
+        &:hover,
+        &:focus {
+            background-image: $gradient-hover;
+            box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.50);
+            cursor: pointer;
+        }
+
+    }
+}
+
+@media #{$desktop} {
+    .modal {
+        max-width: 504px;
+        min-width: 504px;
+        height: 520px;
+        border-radius: 36px;
+        padding: 64px;
+        padding-top: 48px;
+        justify-content: space-between;
+
+
+        &__title {
+            font-size: $fontSizeTitle;
+            margin: 0;
+        }
+
+        &__button {
+            margin-top: 0;
+        }
+    }
+}

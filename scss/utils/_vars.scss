@@ -1,0 +1,29 @@
+$colors: (
+  'primary': #36384D,
+  'secondary': #242742,
+  'third': rgba(25, 24, 43, 0.25),
+  'forth': #FF6155,
+  'fifth': rgba(255, 97, 85, 0.15),
+  'accentLight': #ffffff,
+
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+
+$gradient-hover: linear-gradient(225deg, #FF6A3A 0%, #FF527B 100%);
+$fontFamilyMain: 'Roboto', sans-serif;
+
+
+$fontSizeBig: 16px;
+$fontSizeSmall: 12px;
+$fontSizeTitle: 56px;
+$fontSizeTitleSmaller: 40px;
+
+$transVisibility: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transOpacity: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transTransform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+$desktop: '(min-width: 1440px)';

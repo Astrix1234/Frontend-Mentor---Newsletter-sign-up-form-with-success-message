@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+  <div class="backdrop">
+    <div class="page-start">
+      <div class="page-start__mobil-top">
+        <img src="./images/illustration-sign-up-mobile.svg" alt="illustration">
+      </div>
+      <div class="page-start__left">
+        <h1 class="page-start__title">Stay updated!</h1>
+        <p class="page-start__text">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li class="page-start__item">Product discovery and building what matters</li>
+          <li class="page-start__item">Measuring to ensure updates are a success</li>
+          <li class="page-start__item">And much more!</li>
+        </ul>
+        <form class="page-start__form">
+          <p class="page-start__validation page-start__validation-valid">Valid email required</p>
+          <label class="page-start__label" for="email">Email address
+            <input class="page-start__input page-start__input-valid" type="email" id="email" name="email"
+              placeholder="ash@loremcompany.com">
+          </label>
+          <button class="page-start__button" type="submit">Subscribe to monthly newsletter</button>
+        </form>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="#">Astrix1234</a>.
+        </div>
+      </div>
+      <div class="page-start__right">
+        <img src="./images/illustration-sign-up-desktop.svg" alt="illustration">
+      </div>
+    </div>
+  </div>
+  <div class="backdrop-modal is-hidden">
+    <div class="modal">
+      <div class="modal__success"><img src="./images/icon-success.svg" alt="success"></div>
+      <h2 class="modal__title">Thanks for subscribing!</h2>
+      <p class="modal__info">A confirmation email has been sent to <span class="address-email"></span>. Please open it
+        and click the button inside to confirm your subscription.</p>
+      <button class="modal__button" type="button">Dismiss message</button>
+    </div>
+  </div>
+
+
+
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
