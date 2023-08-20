@@ -7,3 +7,8 @@
 - HTML
 - CSS (SCSS)
 - JS
+
+## About
+
+This is my first challenge from Fronted Mentor, done as part of my Java Script
+learning.
